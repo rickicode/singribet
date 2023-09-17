@@ -121,11 +121,12 @@
         "override_android_vpn": true,
         "final": "Internet",
         "geoip": {
-            "download_url": "https://ghproxy.com/https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geoip.db",
+            "download_url": "https://ghproxy.com/https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
             "download_detour": "Best Latency"
         },
         "geosite": {
-            "download_url": "https://ghproxy.com/https://github.com/Chocolate4U/Iran-sing-box-rules/releases/latest/download/geosite.db",
+            "path": "iran-geosite.db",
+            "download_url": "https://ghproxy.com/https://github.com/bootmortis/iran-hosted-domains/releases/latest/download/iran-geosite.db",
             "download_detour": "Best Latency"
         },
         "rules": [
@@ -136,10 +137,15 @@
             {
                 "geoip": [
                     "ir",
-                    "private",
-                    "arvancloud"
+                    "private"
                 ],
                 "outbound": "direct"
+            },
+            {
+              "domain_suffix": [
+                ".ir"
+              ],
+              "outbound": "direct"
             },
             {
                 "outbound": "dns-out",
